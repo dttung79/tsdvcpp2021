@@ -14,15 +14,18 @@ class LightBulb
     private:
         bool light;
         string name;
+        static int count;
     public:
         // default constructor
         LightBulb();
         // parameter constructor
         LightBulb(const bool &light, const string &name);
+        LightBulb(const LightBulb &bulb); // copy constructor
         // methods
         void turnOn();
         void turnOff();
         bool isOn();
-
+        bool getLight();
         ~LightBulb();
+        static int getCount();
 };
