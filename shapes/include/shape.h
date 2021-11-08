@@ -34,6 +34,6 @@ class Circle : public Shape
         double area() const; // return pi*r*r
         // call print
         friend ostream& operator<<(ostream& os, const Circle &c);
-
+        void print(ostream &os) const;
         //~Circle();
 };

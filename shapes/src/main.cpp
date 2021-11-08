@@ -16,14 +16,9 @@ int main(int argc, char *argv[])
 	Circle c2("C2", 5.0);
 	cout << c2 << endl;
 
-	cout << c2.area() << endl;
 
 	Shape *c3 = new Circle("C3", 4.0);
 	cout << *c3 << endl;
-
-	// cout << "Call print: ";
-	// c3->print();
-	//cout << endl;
 
 	delete c3;
 }
