@@ -14,12 +14,10 @@ class Shape
         Shape(const string &name);
 
         virtual double area() const; // return 0.0
-        // call print
         friend ostream& operator<<(ostream& os, const Shape &s);
     protected:
         void print(ostream &os) const; // print name, area
     public:
-        //virtual void print() const;
         virtual ~Shape();
 };
 
@@ -32,8 +30,25 @@ class Circle : public Shape
         Circle(const string &name, const double &radius);
 
         double area() const; // return pi*r*r
-        // call print
         friend ostream& operator<<(ostream& os, const Circle &c);
-        void print(ostream &os) const;
-        //~Circle();
+};
+
+class Rectangle : public Shape 
+{
+    protected:
+        double width;
+        double height;
+    public:
+        Rectangle();
+        Rectangle(const string &name, const double &width, const double &height);
+        double area() const;
+        friend ostream& operator<<(ostream& os, const Rectangle &r);
+};
+
+class Square : public Rectangle 
+{
+    public:
+        Square();
+        Square(const string &name, const double &side);
+        friend ostream& operator<<(ostream& os, const Square &s);
 };
