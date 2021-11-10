@@ -9,9 +9,9 @@ class MenuProgram
     public:
         void run();
     protected:
-        virtual void printMenu() const;
+        virtual void printMenu() const = 0; // no implementation
         int getChoice() const;
-        virtual void doTask(const int &choice);
+        virtual void doTask(const int &choice) = 0; // no implementation
 };
 
 #define CIRCLE 1

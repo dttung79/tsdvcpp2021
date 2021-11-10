@@ -9,10 +9,19 @@ Fraction::Fraction()
 
 Fraction::Fraction(const int &n, const int &d) 
 {
-    num = n;
-    den = d;
+    setNumerator(n);
+    setDenominator(d);
 }
 
+void Fraction::setNumerator(const int &n)
+{
+    this->num = n;
+}
+
+void Fraction::setDenominator(const int &d)
+{
+    this->den = d;
+}
 bool Fraction::operator==(const Fraction &f) const
 {
     return num*f.den == den*f.num;

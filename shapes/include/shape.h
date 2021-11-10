@@ -5,7 +5,7 @@ using namespace std;
 
 #define PI 3.14
 
-class Shape
+class Shape // abstract class -> cannot create objects
 {
     protected:
         string name;
@@ -13,7 +13,7 @@ class Shape
         Shape();
         Shape(const string &name);
 
-        virtual double area() const; // return 0.0
+        virtual double area() const = 0; // return 0.0
         friend ostream& operator<<(ostream& os, const Shape &s);
     protected:
         void print(ostream &os) const; // print name, area

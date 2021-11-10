@@ -10,6 +10,8 @@ class Fraction
     public:
         Fraction();
         Fraction(const int &n, const int &d);
+        void setNumerator(const int &n);
+        void setDenominator(const int &d);
         bool operator==(const Fraction &f) const;
         Fraction operator+(const Fraction &f) const;
         friend ostream& operator<<(ostream &os, const Fraction &f);

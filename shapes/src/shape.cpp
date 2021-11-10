@@ -9,10 +9,10 @@ Shape::Shape(const string &name)
     this->name = name;
 }
 
-double Shape::area() const
-{
-    return 0.0;
-}
+// double Shape::area() const
+// {
+//     return 0.0;
+// }
 
 ostream& operator<<(ostream& os, const Shape &s) 
 {

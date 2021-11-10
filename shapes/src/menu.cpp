@@ -16,10 +16,10 @@ void MenuProgram::run()
     }
 }
 
-void MenuProgram::printMenu() const
-{
-    // do nothing
-}
+// void MenuProgram::printMenu() const
+// {
+//     // do nothing
+// }
 
 int MenuProgram::getChoice() const
 {
@@ -29,10 +29,10 @@ int MenuProgram::getChoice() const
     return choice;
 }
 
-void MenuProgram::doTask(const int &choice) 
-{
-    // do nothing
-}
+// void MenuProgram::doTask(const int &choice) 
+// {
+//     // do nothing
+// }
 
 /*         SHAPE IMPLEMENTATION */
 ShapeDemo::ShapeDemo()
@@ -80,7 +80,7 @@ void ShapeDemo::addSquare()
 void ShapeDemo::printAll()
 {
     for (int i = 0; i < nShapes; i++)
-        cout << *shapes[i] << endl;
+        cout << *shapes[i] << endl; // call print -> area
 }
 void ShapeDemo::exitProgram()
 {
