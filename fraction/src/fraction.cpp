@@ -20,6 +20,7 @@ void Fraction::setNumerator(const int &n)
 
 void Fraction::setDenominator(const int &d)
 {
+    if (d == 0) throw DenominatorIsZeroException();
     this->den = d;
 }
 bool Fraction::operator==(const Fraction &f) const
@@ -30,7 +31,10 @@ bool Fraction::operator==(const Fraction &f) const
 istream& operator>>(istream &is, Fraction &f) 
 {
     char c;
-    is >> f.num >> c >> f.den;
+    int n, d;
+    is >> n >> c >> d;
+    f.setNumerator(n);
+    f.setDenominator(d); // possible throw exception
     return is;
 }
 
@@ -45,4 +49,11 @@ Fraction Fraction::operator+(const Fraction &f) const
     int n = num*f.den + den*f.num;
     int d = den*f.den;
     return Fraction(n, d);
+}
+
+Fraction Fraction::operator/(const Fraction &f) const
+{
+    int n = num*f.den;
+    int d = den*f.num;
+    return Fraction(n, d); // ->> throw if d == 0
 }

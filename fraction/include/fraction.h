@@ -14,6 +14,16 @@ class Fraction
         void setDenominator(const int &d);
         bool operator==(const Fraction &f) const;
         Fraction operator+(const Fraction &f) const;
+        Fraction operator/(const Fraction &f) const;
         friend ostream& operator<<(ostream &os, const Fraction &f);
         friend istream& operator>>(istream &is, Fraction &f);
+};
+
+class DenominatorIsZeroException : public exception
+{
+    public:
+        const char* what() const throw()
+        {
+            return "Error: denominator is zero!";
+        }
 };
