@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	Node *last = myList.delete();
 	cout << last->key << endl; // 1
-	delete last;
+	delete last; // delete 1
 
 	myList.print(); // [5]->[4]->[3]->[2]->[]
 } 
